@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CA3B138507E3C7B81E55A1E7 /* libPods-ObjcBasicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */; };
+		CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */; };
+		CB4F1FF01AF1944C006715A5 /* ZLIVariableScopeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */; };
+		CB4F1FF21AF1C7ED006715A5 /* ZLISingletonClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */; };
 		CB8A43A01A3FFA5400908415 /* ObjcBasic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB8A439F1A3FFA5400908415 /* ObjcBasic.h */; };
 		CB8A43A21A3FFA5400908415 /* ObjcBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A43A11A3FFA5400908415 /* ObjcBasic.m */; };
 		CB8A43A81A3FFA5400908415 /* libObjcBasic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8A439C1A3FFA5400908415 /* libObjcBasic.a */; };
-		CB8A43B71A400CFC00908415 /* ZLIOperatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A43B61A400CFC00908415 /* ZLIOperatorTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +43,14 @@
 		498C3213211CFB78F2D69D4F /* Pods-ObjcBasicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcBasicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcBasicTests/Pods-ObjcBasicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A974562EC6925A5111E242E3 /* Pods-ObjcBasicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcBasicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcBasicTests/Pods-ObjcBasicTests.release.xcconfig"; sourceTree = "<group>"; };
 		C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcBasicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIOperatorTest.m; sourceTree = "<group>"; };
+		CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIVariableScopeTest.m; sourceTree = "<group>"; };
+		CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLISingletonClassTest.m; sourceTree = "<group>"; };
 		CB8A439C1A3FFA5400908415 /* libObjcBasic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjcBasic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A439F1A3FFA5400908415 /* ObjcBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcBasic.h; sourceTree = "<group>"; };
 		CB8A43A11A3FFA5400908415 /* ObjcBasic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcBasic.m; sourceTree = "<group>"; };
 		CB8A43A71A3FFA5400908415 /* ObjcBasicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcBasicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A43AD1A3FFA5400908415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB8A43B61A400CFC00908415 /* ZLIOperatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIOperatorTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB4F1FEB1AF191C7006715A5 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */,
+				CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		CB4F1FEC1AF191C7006715A5 /* operator */ = {
+			isa = PBXGroup;
+			children = (
+				CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */,
+			);
+			path = operator;
+			sourceTree = "<group>";
+		};
 		CB8A43931A3FFA5400908415 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +139,9 @@
 		CB8A43AB1A3FFA5400908415 /* ObjcBasicTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB4F1FEB1AF191C7006715A5 /* class */,
+				CB4F1FEC1AF191C7006715A5 /* operator */,
 				CB8A43AC1A3FFA5400908415 /* Supporting Files */,
-				CB8A43B61A400CFC00908415 /* ZLIOperatorTest.m */,
 			);
 			path = ObjcBasicTests;
 			sourceTree = "<group>";
@@ -264,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8A43B71A400CFC00908415 /* ZLIOperatorTest.m in Sources */,
+				CB4F1FF01AF1944C006715A5 /* ZLIVariableScopeTest.m in Sources */,
+				CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */,
+				CB4F1FF21AF1C7ED006715A5 /* ZLISingletonClassTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
