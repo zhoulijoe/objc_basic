@@ -11,6 +11,8 @@
 		CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */; };
 		CB4F1FF01AF1944C006715A5 /* ZLIVariableScopeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */; };
 		CB4F1FF21AF1C7ED006715A5 /* ZLISingletonClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */; };
+		CB5AF6CF1AF9F4A000303765 /* ZLINumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF6CE1AF9F4A000303765 /* ZLINumberTest.m */; };
+		CB5AF6D21AF9FAF000303765 /* ZLIVaribleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF6D11AF9FAF000303765 /* ZLIVaribleTest.m */; };
 		CB8A43A01A3FFA5400908415 /* ObjcBasic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB8A439F1A3FFA5400908415 /* ObjcBasic.h */; };
 		CB8A43A21A3FFA5400908415 /* ObjcBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A43A11A3FFA5400908415 /* ObjcBasic.m */; };
 		CB8A43A81A3FFA5400908415 /* libObjcBasic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8A439C1A3FFA5400908415 /* libObjcBasic.a */; };
@@ -46,6 +48,8 @@
 		CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIOperatorTest.m; sourceTree = "<group>"; };
 		CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIVariableScopeTest.m; sourceTree = "<group>"; };
 		CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLISingletonClassTest.m; sourceTree = "<group>"; };
+		CB5AF6CE1AF9F4A000303765 /* ZLINumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLINumberTest.m; sourceTree = "<group>"; };
+		CB5AF6D11AF9FAF000303765 /* ZLIVaribleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIVaribleTest.m; sourceTree = "<group>"; };
 		CB8A439C1A3FFA5400908415 /* libObjcBasic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjcBasic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A439F1A3FFA5400908415 /* ObjcBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcBasic.h; sourceTree = "<group>"; };
 		CB8A43A11A3FFA5400908415 /* ObjcBasic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcBasic.m; sourceTree = "<group>"; };
@@ -107,6 +111,22 @@
 			path = operator;
 			sourceTree = "<group>";
 		};
+		CB5AF6CD1AF9F3B700303765 /* primitive */ = {
+			isa = PBXGroup;
+			children = (
+				CB5AF6CE1AF9F4A000303765 /* ZLINumberTest.m */,
+			);
+			path = primitive;
+			sourceTree = "<group>";
+		};
+		CB5AF6D01AF9FAD500303765 /* variable */ = {
+			isa = PBXGroup;
+			children = (
+				CB5AF6D11AF9FAF000303765 /* ZLIVaribleTest.m */,
+			);
+			path = variable;
+			sourceTree = "<group>";
+		};
 		CB8A43931A3FFA5400908415 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +159,8 @@
 		CB8A43AB1A3FFA5400908415 /* ObjcBasicTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB5AF6D01AF9FAD500303765 /* variable */,
+				CB5AF6CD1AF9F3B700303765 /* primitive */,
 				CB4F1FEB1AF191C7006715A5 /* class */,
 				CB4F1FEC1AF191C7006715A5 /* operator */,
 				CB8A43AC1A3FFA5400908415 /* Supporting Files */,
@@ -288,7 +310,9 @@
 			files = (
 				CB4F1FF01AF1944C006715A5 /* ZLIVariableScopeTest.m in Sources */,
 				CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */,
+				CB5AF6CF1AF9F4A000303765 /* ZLINumberTest.m in Sources */,
 				CB4F1FF21AF1C7ED006715A5 /* ZLISingletonClassTest.m in Sources */,
+				CB5AF6D21AF9FAF000303765 /* ZLIVaribleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
