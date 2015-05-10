@@ -5,19 +5,29 @@ SPEC_BEGIN(ZLIVariableTest)
 describe(@"variable", ^{
     context(@"bascis", ^{
         it(@"creation", ^{
-            int var1 = 1;
+            int intVar = 1;
 
-            [[theValue(var1) should] equal:theValue(1)];
+            [[theValue(intVar) should] equal:theValue(1)];
+        });
+
+        it(@"generic object variable can point to any object", ^{
+            id genericVar = [NSObject new];
+
+            [[genericVar should] beNonNil];
+
+            genericVar = @"hello";
+
+            [[genericVar should] beNonNil];
         });
     });
 
     context(@"pointer", ^{
         it(@"points to address of a variable", ^{
-            int var1 = 1;
-            int *ptr1 = &var1;
-            int var2 = *ptr1;
+            int intVar1 = 1;
+            int *intPtr1 = &intVar1;
+            int intVar2 = *intPtr1;
 
-            [[theValue(var2) should] equal:theValue(var1)];
+            [[theValue(intVar2) should] equal:theValue(intVar1)];
         });
     });
 });
