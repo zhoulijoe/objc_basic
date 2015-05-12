@@ -29,6 +29,12 @@ describe(@"variable", ^{
 
             [[theValue(intVar2) should] equal:theValue(intVar1)];
         });
+
+        it(@"non-initialized pointer variable is set to nil by compile", ^{
+            NSNumber *num;
+
+            [[num should] beNil];
+        });
     });
 });
 
