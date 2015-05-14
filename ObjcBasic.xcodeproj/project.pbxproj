@@ -10,6 +10,7 @@
 		CA3B138507E3C7B81E55A1E7 /* libPods-ObjcBasicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */; };
 		CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */; };
 		CB46D23D1B01DB71006EB859 /* ZLILoggingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D23C1B01DB71006EB859 /* ZLILoggingTest.m */; };
+		CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D23E1B048014006EB859 /* ZLIClassTest.m */; };
 		CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */; };
 		CB4F1FF01AF1944C006715A5 /* ZLIVariableScopeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */; };
 		CB4F1FF21AF1C7ED006715A5 /* ZLISingletonClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */; };
@@ -55,6 +56,7 @@
 		C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcBasicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIObjectTest.m; sourceTree = "<group>"; };
 		CB46D23C1B01DB71006EB859 /* ZLILoggingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLILoggingTest.m; sourceTree = "<group>"; };
+		CB46D23E1B048014006EB859 /* ZLIClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIClassTest.m; sourceTree = "<group>"; };
 		CB4F1FED1AF191C7006715A5 /* ZLIOperatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIOperatorTest.m; sourceTree = "<group>"; };
 		CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIVariableScopeTest.m; sourceTree = "<group>"; };
 		CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLISingletonClassTest.m; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */,
 				CB4F1FF11AF1C7ED006715A5 /* ZLISingletonClassTest.m */,
 				CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */,
+				CB46D23E1B048014006EB859 /* ZLIClassTest.m */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */,
 				CB46D23D1B01DB71006EB859 /* ZLILoggingTest.m in Sources */,
 				CB6CD49C1B007605000FC3BF /* ZLIArrayTest.m in Sources */,
+				CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */,
 				CB6CD4951AFF2B4B000FC3BF /* ZLIStringTest.m in Sources */,
 				CB5AF6CF1AF9F4A000303765 /* ZLINumberTest.m in Sources */,
 				CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */,
