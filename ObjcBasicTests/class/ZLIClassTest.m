@@ -35,6 +35,42 @@
 @property NSUInteger getterCalled;
 @property NSUInteger setterCalled;
 
+/**
+ * Method available on the class
+ *
+ * @param paramOne First parameter
+ * @param paramTwo Second parameter
+ *
+ * @return Combined string value
+ */
++ (NSString *)classMethodwithParamOne:(NSString *)paramOne paramTwo:(NSString *)paramTwo;
+
+/**
+ * Method available on an instance of the class which has no return value
+ */
+- (void)instanceMethod;
+
+/**
+ * An instance method that returns a string
+ *
+ * @return String value
+ */
+- (NSString *)instanceMethodReturnsStr;
+
+/**
+ * An instance method that returns a number
+ *
+ * @return Numeric value
+ */
+- (NSInteger)instanceMethodReturnsNum;
+
+/**
+ * An instance method that returns a boolean
+ *
+ * @return Boolean value
+ */
+- (BOOL)instanceMethodReturnsBool;
+
 @end
 
 // Implementation usually goes in .m file
@@ -48,6 +84,7 @@
 @implementation ZLIClassTestBasic
 
 - (instancetype)init {
+    // Use 'super' to invoke method from superclass
     self = [super init];
 
     if (self) {
@@ -57,6 +94,34 @@
     }
 
     return self;
+}
+
++ (NSString *)classMethodwithParamOne:(NSString *)paramOne paramTwo:(NSString *)paramTwo {
+    return [NSString stringWithFormat:@"%@ %@", paramOne, paramTwo];
+}
+
+- (void)instanceMethod {
+    // self pointer is a way to refer to “the object that’s received this message.”
+    self.strProperty = @"hello world";
+}
+
+- (NSString *)instanceMethodReturnsStr {
+    return @"hello";
+}
+
+- (NSInteger)instanceMethodReturnsNum {
+    return 1;
+}
+
+- (BOOL)instanceMethodReturnsBool {
+    return YES;
+}
+
+/**
+ * Private method is only defined in implementation file
+ */
+- (void)privateMethod {
+    self.strProperty = @"private hello";
 }
 
 /*
@@ -185,6 +250,39 @@ describe(@"class", ^{
             ZLIClassTestBasic *classTestBasic = [ZLIClassTestBasic new];
 
             [[classTestBasic.lazyProperty should] equal:@"hello"];
+        });
+    });
+
+    context(@"method", ^{
+        it(@"instance method has access to instance property", ^{
+            ZLIClassTestBasic *classTestBasic = [ZLIClassTestBasic new];
+            [classTestBasic instanceMethod];
+
+            [[classTestBasic.strProperty should] equal:@"hello world"];
+        });
+
+        it(@"class method can be called without creating an instance", ^{
+            [[[ZLIClassTestBasic classMethodwithParamOne:@"hello" paramTwo:@"world"] should] equal:@"hello world"];
+        });
+    });
+
+    context(@"method invoked on nil in accetptable and has", ^{
+        it(@"nil return value for object return type", ^{
+            ZLIClassTestBasic *classTestBasic = nil;
+
+            [[[classTestBasic instanceMethodReturnsStr] should] beNil];
+        });
+
+        it(@"has 0 return value for numeric type", ^{
+            ZLIClassTestBasic *classTestBasic = nil;
+
+            [[theValue([classTestBasic instanceMethodReturnsNum]) should] equal:theValue(0)];
+        });
+
+        it(@"has NO return value for boolean type", ^{
+            ZLIClassTestBasic *classTestBasic = nil;
+
+            [[theValue([classTestBasic instanceMethodReturnsBool]) should] beNo];
         });
     });
 });
