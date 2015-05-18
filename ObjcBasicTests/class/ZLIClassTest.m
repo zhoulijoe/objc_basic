@@ -73,7 +73,9 @@
 
 @end
 
-// Implementation usually goes in .m file
+// Implementation and class extension usually goes in .m file
+
+// Syntax for class extension that can be used to add private properties
 @interface ZLIClassTestBasic ()
 
 // Dispatch queue for thread safe lazy-loading getter

@@ -25,6 +25,8 @@
 		CB8A43A01A3FFA5400908415 /* ObjcBasic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB8A439F1A3FFA5400908415 /* ObjcBasic.h */; };
 		CB8A43A21A3FFA5400908415 /* ObjcBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A43A11A3FFA5400908415 /* ObjcBasic.m */; };
 		CB8A43A81A3FFA5400908415 /* libObjcBasic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8A439C1A3FFA5400908415 /* libObjcBasic.a */; };
+		CBBBC0AC1B0852900074BD68 /* ZLICategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBC0AB1B0852900074BD68 /* ZLICategoryTest.m */; };
+		CBBBC0AF1B0962640074BD68 /* ZLIVariableReferenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBC0AE1B0962640074BD68 /* ZLIVariableReferenceTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CB8A43A11A3FFA5400908415 /* ObjcBasic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcBasic.m; sourceTree = "<group>"; };
 		CB8A43A71A3FFA5400908415 /* ObjcBasicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcBasicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A43AD1A3FFA5400908415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBBBC0AB1B0852900074BD68 /* ZLICategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLICategoryTest.m; sourceTree = "<group>"; };
+		CBBBC0AE1B0962640074BD68 /* ZLIVariableReferenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIVariableReferenceTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 		CB8A43AB1A3FFA5400908415 /* ObjcBasicTests */ = {
 			isa = PBXGroup;
 			children = (
+				CBBBC0AD1B0960540074BD68 /* memoryManagement */,
+				CBBBC0AA1B0852770074BD68 /* category */,
 				CB46D23B1B01DB5E006EB859 /* logging */,
 				CB6CD49A1B0075EB000FC3BF /* collection */,
 				CB5AF6D01AF9FAD500303765 /* variable */,
@@ -217,6 +223,22 @@
 				CB8A43AD1A3FFA5400908415 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBBBC0AA1B0852770074BD68 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				CBBBC0AB1B0852900074BD68 /* ZLICategoryTest.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		CBBBC0AD1B0960540074BD68 /* memoryManagement */ = {
+			isa = PBXGroup;
+			children = (
+				CBBBC0AE1B0962640074BD68 /* ZLIVariableReferenceTest.m */,
+			);
+			path = memoryManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +380,9 @@
 				CB46D23D1B01DB71006EB859 /* ZLILoggingTest.m in Sources */,
 				CB6CD49C1B007605000FC3BF /* ZLIArrayTest.m in Sources */,
 				CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */,
+				CBBBC0AC1B0852900074BD68 /* ZLICategoryTest.m in Sources */,
 				CB6CD4951AFF2B4B000FC3BF /* ZLIStringTest.m in Sources */,
+				CBBBC0AF1B0962640074BD68 /* ZLIVariableReferenceTest.m in Sources */,
 				CB5AF6CF1AF9F4A000303765 /* ZLINumberTest.m in Sources */,
 				CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */,
 				CB6CD4991B0070FE000FC3BF /* ZLIDateTest.m in Sources */,
