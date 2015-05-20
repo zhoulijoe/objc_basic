@@ -59,6 +59,12 @@ describe(@"memory management for variable", ^{
 
             [[testClass.strongProperty should] beNonNil];
         });
+
+        it(@"local variable holds strong reference to object", ^{
+            NSString *str = @"hello";
+
+            [[str should] beNonNil];
+        });
     });
 
     context(@"weak reference; A weak reference does not imply ownership or responsibility between two objects,\
@@ -68,6 +74,28 @@ describe(@"memory management for variable", ^{
             ZLIVariableReferenceTestSecondClass *secondTestClass = [ZLIVariableReferenceTestSecondClass new];
 
             [[secondTestClass.strongReference should] beNonNil];
+        });
+
+        it(@"local variable can be declared to hold weak reference", ^{
+            __weak NSString *weakStr = @"hello";
+
+            // weakStr could already be nil at this point since it doesn't maintain memory for object
+            [[theValue(YES) should] beYes];
+        });
+
+        it(@"local variable can be used to maintain memory of weak property for the duration of a method", ^{
+            ZLIVariableReferenceTestSecondClass *testClass = [ZLIVariableReferenceTestSecondClass new];
+
+            // Object will be kept alive from this point
+            ZLIVariableReferenceTestSecondClass *strongReference = testClass.strongReference.weakReference;
+
+            if (strongReference) {
+                [[strongReference should] beNonNil];
+            }
+
+            // Until here
+            strongReference = nil;
+            [[theValue(YES) should] beYes];
         });
     });
 });

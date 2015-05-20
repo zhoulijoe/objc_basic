@@ -31,6 +31,9 @@
 // Lazily initialized property
 @property (nonatomic) NSString *lazyProperty;
 
+// Property that keeps a copy of the object instead pointing to same reference, object class must conform to NSCopying protocol
+@property (copy) NSMutableArray *propertyCopy;
+
 // Counters for test purpose
 @property NSUInteger getterCalled;
 @property NSUInteger setterCalled;
@@ -93,6 +96,24 @@
         // Use instance variable in initializer
         _syncQueue = dispatch_queue_create("ZLIClassTestBasicSyncQueue", 0);
         _propertyWithInitialValue = @"hello";
+    }
+
+    return self;
+}
+
+/**
+ * When setting property with copy attribute in initializer, make sure to make a copy of the original object when
+ * setting the property.
+ *
+ * @param propertyCopy Initial value for copy property
+ *
+ * @return New instance of the class
+ */
+- (instancetype)initWithPropertyCopy:(NSMutableArray *)anArray {
+    self = [super init];
+
+    if (self) {
+        _propertyCopy = [anArray copy];
     }
 
     return self;
@@ -191,6 +212,16 @@ describe(@"class", ^{
         [[classTestBasic should] beNonNil];
     });
 
+    context(@"initializer", ^{
+        it(@"for copy property needs to set copy property to a copy of the passed in param", ^{
+            NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@1, nil];
+            ZLIClassTestBasic *classTestBasic = [[ZLIClassTestBasic alloc] initWithPropertyCopy:anArray];
+
+            [[theValue(anArray == classTestBasic.propertyCopy) should] beNo];
+            [[classTestBasic.propertyCopy should] equal:anArray];
+        });
+    });
+
     context(@"property", ^{
         it(@"is readable and writable by default", ^{
             ZLIClassTestBasic *classTestBasic = [ZLIClassTestBasic new];
@@ -252,6 +283,19 @@ describe(@"class", ^{
             ZLIClassTestBasic *classTestBasic = [ZLIClassTestBasic new];
 
             [[classTestBasic.lazyProperty should] equal:@"hello"];
+        });
+
+        it(@"can keep a copy of object instead of pointing to same instance", ^{
+            ZLIClassTestBasic *classTestBasic = [ZLIClassTestBasic new];
+            NSMutableArray *array1 = [NSMutableArray arrayWithArray:@[@1, @2, @3]];
+            classTestBasic.propertyCopy = array1;
+
+            [[theValue(array1 == classTestBasic.propertyCopy) should] beNo];
+            [[array1 should] equal:classTestBasic.propertyCopy];
+
+            [array1 addObject:@4];
+
+            [[array1 shouldNot] equal:classTestBasic.propertyCopy];
         });
     });
 
