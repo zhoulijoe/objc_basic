@@ -79,6 +79,10 @@ describe(@"memory management for variable", ^{
         it(@"local variable can be declared to hold weak reference", ^{
             __weak NSString *weakStr = @"hello";
 
+            if (weakStr) {
+                // Check if weak pointer reference still exists
+            }
+
             // weakStr could already be nil at this point since it doesn't maintain memory for object
             [[theValue(YES) should] beYes];
         });

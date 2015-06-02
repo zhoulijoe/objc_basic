@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA3B138507E3C7B81E55A1E7 /* libPods-ObjcBasicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */; };
+		CB239F181B1D6B7800BA8F64 /* ZLIInheritanceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB239F171B1D6B7800BA8F64 /* ZLIInheritanceTest.m */; };
 		CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */; };
 		CB46D23D1B01DB71006EB859 /* ZLILoggingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D23C1B01DB71006EB859 /* ZLILoggingTest.m */; };
 		CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D23E1B048014006EB859 /* ZLIClassTest.m */; };
@@ -21,6 +22,7 @@
 		CB6CD49C1B007605000FC3BF /* ZLIArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6CD49B1B007605000FC3BF /* ZLIArrayTest.m */; };
 		CB6CD49E1B0197BC000FC3BF /* ZLISetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6CD49D1B0197BC000FC3BF /* ZLISetTest.m */; };
 		CB6CD4A01B01989D000FC3BF /* ZLIDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6CD49F1B01989D000FC3BF /* ZLIDictionaryTest.m */; };
+		CB7D71E21B0C768600A73BAB /* ZLIEnumTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7D71E11B0C768600A73BAB /* ZLIEnumTest.m */; };
 		CB8A43A01A3FFA5400908415 /* ObjcBasic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB8A439F1A3FFA5400908415 /* ObjcBasic.h */; };
 		CB8A43A21A3FFA5400908415 /* ObjcBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A43A11A3FFA5400908415 /* ObjcBasic.m */; };
 		CB8A43A81A3FFA5400908415 /* libObjcBasic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8A439C1A3FFA5400908415 /* libObjcBasic.a */; };
@@ -57,6 +59,7 @@
 		498C3213211CFB78F2D69D4F /* Pods-ObjcBasicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcBasicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcBasicTests/Pods-ObjcBasicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A974562EC6925A5111E242E3 /* Pods-ObjcBasicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcBasicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcBasicTests/Pods-ObjcBasicTests.release.xcconfig"; sourceTree = "<group>"; };
 		C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcBasicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB239F171B1D6B7800BA8F64 /* ZLIInheritanceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIInheritanceTest.m; sourceTree = "<group>"; };
 		CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIObjectTest.m; sourceTree = "<group>"; };
 		CB46D23C1B01DB71006EB859 /* ZLILoggingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLILoggingTest.m; sourceTree = "<group>"; };
 		CB46D23E1B048014006EB859 /* ZLIClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIClassTest.m; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		CB6CD49B1B007605000FC3BF /* ZLIArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIArrayTest.m; sourceTree = "<group>"; };
 		CB6CD49D1B0197BC000FC3BF /* ZLISetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLISetTest.m; sourceTree = "<group>"; };
 		CB6CD49F1B01989D000FC3BF /* ZLIDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIDictionaryTest.m; sourceTree = "<group>"; };
+		CB7D71E11B0C768600A73BAB /* ZLIEnumTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIEnumTest.m; sourceTree = "<group>"; };
 		CB8A439C1A3FFA5400908415 /* libObjcBasic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjcBasic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A439F1A3FFA5400908415 /* ObjcBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcBasic.h; sourceTree = "<group>"; };
 		CB8A43A11A3FFA5400908415 /* ObjcBasic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcBasic.m; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				CB4F1FEF1AF1944C006715A5 /* ZLIVariableScopeTest.m */,
 				CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */,
 				CB46D23E1B048014006EB859 /* ZLIClassTest.m */,
+				CB239F171B1D6B7800BA8F64 /* ZLIInheritanceTest.m */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				CB6CD4941AFF2B4B000FC3BF /* ZLIStringTest.m */,
 				CB6CD4961B006E86000FC3BF /* ZLIBooleanTest.m */,
 				CB6CD4981B0070FE000FC3BF /* ZLIDateTest.m */,
+				CB7D71E11B0C768600A73BAB /* ZLIEnumTest.m */,
 			);
 			path = primitive;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				CB6CD49C1B007605000FC3BF /* ZLIArrayTest.m in Sources */,
 				CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */,
 				CBBBC0AC1B0852900074BD68 /* ZLICategoryTest.m in Sources */,
+				CB7D71E21B0C768600A73BAB /* ZLIEnumTest.m in Sources */,
 				CB6CD4951AFF2B4B000FC3BF /* ZLIStringTest.m in Sources */,
 				CBBBC0AF1B0962640074BD68 /* ZLIVariableReferenceTest.m in Sources */,
 				CBBBC0B41B0C6C870074BD68 /* ZLIDelegateTest.m in Sources */,
@@ -400,6 +407,7 @@
 				CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */,
 				CB6CD4991B0070FE000FC3BF /* ZLIDateTest.m in Sources */,
 				CB5AF6D21AF9FAF000303765 /* ZLIVaribleTest.m in Sources */,
+				CB239F181B1D6B7800BA8F64 /* ZLIInheritanceTest.m in Sources */,
 				CB6CD4A01B01989D000FC3BF /* ZLIDictionaryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -81,6 +81,9 @@
 // Syntax for class extension that can be used to add private properties
 @interface ZLIClassTestBasic ()
 
+// Private instance property
+@property NSString *privateProperty;
+
 // Dispatch queue for thread safe lazy-loading getter
 @property dispatch_queue_t syncQueue;
 
@@ -96,6 +99,7 @@
         // Use instance variable in initializer
         _syncQueue = dispatch_queue_create("ZLIClassTestBasicSyncQueue", 0);
         _propertyWithInitialValue = @"hello";
+        _privateProperty = @"private value";
     }
 
     return self;
@@ -213,6 +217,14 @@ describe(@"class", ^{
     });
 
     context(@"initializer", ^{
+        it(@"different syntax", ^{
+            ZLIClassTestBasic *classInstance = [[ZLIClassTestBasic alloc] init];
+            [[classInstance should] beNonNil];
+
+            classInstance = [ZLIClassTestBasic new];
+            [[classInstance should] beNonNil];
+        });
+
         it(@"for copy property needs to set copy property to a copy of the passed in param", ^{
             NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@1, nil];
             ZLIClassTestBasic *classTestBasic = [[ZLIClassTestBasic alloc] initWithPropertyCopy:anArray];
@@ -297,6 +309,12 @@ describe(@"class", ^{
 
             [[array1 shouldNot] equal:classTestBasic.propertyCopy];
         });
+
+        it(@"private property can still be accessed via key-value coding", ^{
+            ZLIClassTestBasic *classTestBasic = [ZLIClassTestBasic new];
+            NSString *privateValue = [classTestBasic valueForKey:@"privateProperty"];
+            [[privateValue should] equal:@"private value"];
+        });
     });
 
     context(@"method", ^{
@@ -309,6 +327,11 @@ describe(@"class", ^{
 
         it(@"class method can be called without creating an instance", ^{
             [[[ZLIClassTestBasic classMethodwithParamOne:@"hello" paramTwo:@"world"] should] equal:@"hello world"];
+        });
+
+        it(@"get class and calling class method without casting class variable", ^{
+            Class classVar = [ZLIClassTestBasic class];
+            [[[classVar classMethodwithParamOne:@"hello" paramTwo:@"world"] should] equal:@"hello world"];
         });
     });
 
