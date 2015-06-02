@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CA3B138507E3C7B81E55A1E7 /* libPods-ObjcBasicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */; };
 		CB239F181B1D6B7800BA8F64 /* ZLIInheritanceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB239F171B1D6B7800BA8F64 /* ZLIInheritanceTest.m */; };
+		CB239F1B1B1D750F00BA8F64 /* ZLIProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB239F1A1B1D750F00BA8F64 /* ZLIProtocolTest.m */; };
+		CB239F1E1B1D799F00BA8F64 /* ZLIKiwiSpecTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB239F1C1B1D799F00BA8F64 /* ZLIKiwiSpecTest.m */; };
+		CB239F1F1B1D799F00BA8F64 /* ZLISampleXCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB239F1D1B1D799F00BA8F64 /* ZLISampleXCTest.m */; };
 		CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */; };
 		CB46D23D1B01DB71006EB859 /* ZLILoggingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D23C1B01DB71006EB859 /* ZLILoggingTest.m */; };
 		CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46D23E1B048014006EB859 /* ZLIClassTest.m */; };
@@ -23,8 +26,6 @@
 		CB6CD49E1B0197BC000FC3BF /* ZLISetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6CD49D1B0197BC000FC3BF /* ZLISetTest.m */; };
 		CB6CD4A01B01989D000FC3BF /* ZLIDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6CD49F1B01989D000FC3BF /* ZLIDictionaryTest.m */; };
 		CB7D71E21B0C768600A73BAB /* ZLIEnumTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7D71E11B0C768600A73BAB /* ZLIEnumTest.m */; };
-		CB8A43A01A3FFA5400908415 /* ObjcBasic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB8A439F1A3FFA5400908415 /* ObjcBasic.h */; };
-		CB8A43A21A3FFA5400908415 /* ObjcBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A43A11A3FFA5400908415 /* ObjcBasic.m */; };
 		CB8A43A81A3FFA5400908415 /* libObjcBasic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8A439C1A3FFA5400908415 /* libObjcBasic.a */; };
 		CBBBC0AC1B0852900074BD68 /* ZLICategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBC0AB1B0852900074BD68 /* ZLICategoryTest.m */; };
 		CBBBC0AF1B0962640074BD68 /* ZLIVariableReferenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBC0AE1B0962640074BD68 /* ZLIVariableReferenceTest.m */; };
@@ -49,7 +50,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				CB8A43A01A3FFA5400908415 /* ObjcBasic.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +60,9 @@
 		A974562EC6925A5111E242E3 /* Pods-ObjcBasicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcBasicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjcBasicTests/Pods-ObjcBasicTests.release.xcconfig"; sourceTree = "<group>"; };
 		C1B6042756E3961F50B43E3D /* libPods-ObjcBasicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjcBasicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB239F171B1D6B7800BA8F64 /* ZLIInheritanceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIInheritanceTest.m; sourceTree = "<group>"; };
+		CB239F1A1B1D750F00BA8F64 /* ZLIProtocolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIProtocolTest.m; sourceTree = "<group>"; };
+		CB239F1C1B1D799F00BA8F64 /* ZLIKiwiSpecTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIKiwiSpecTest.m; sourceTree = "<group>"; };
+		CB239F1D1B1D799F00BA8F64 /* ZLISampleXCTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLISampleXCTest.m; sourceTree = "<group>"; };
 		CB46D2391B01C4FA006EB859 /* ZLIObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIObjectTest.m; sourceTree = "<group>"; };
 		CB46D23C1B01DB71006EB859 /* ZLILoggingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLILoggingTest.m; sourceTree = "<group>"; };
 		CB46D23E1B048014006EB859 /* ZLIClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIClassTest.m; sourceTree = "<group>"; };
@@ -75,8 +78,6 @@
 		CB6CD49F1B01989D000FC3BF /* ZLIDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIDictionaryTest.m; sourceTree = "<group>"; };
 		CB7D71E11B0C768600A73BAB /* ZLIEnumTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLIEnumTest.m; sourceTree = "<group>"; };
 		CB8A439C1A3FFA5400908415 /* libObjcBasic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjcBasic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB8A439F1A3FFA5400908415 /* ObjcBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcBasic.h; sourceTree = "<group>"; };
-		CB8A43A11A3FFA5400908415 /* ObjcBasic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcBasic.m; sourceTree = "<group>"; };
 		CB8A43A71A3FFA5400908415 /* ObjcBasicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcBasicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8A43AD1A3FFA5400908415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBBBC0AB1B0852900074BD68 /* ZLICategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLICategoryTest.m; sourceTree = "<group>"; };
@@ -120,6 +121,14 @@
 				A974562EC6925A5111E242E3 /* Pods-ObjcBasicTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB239F191B1D74FB00BA8F64 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				CB239F1A1B1D750F00BA8F64 /* ZLIProtocolTest.m */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 		CB46D23B1B01DB5E006EB859 /* logging */ = {
@@ -202,8 +211,6 @@
 		CB8A439E1A3FFA5400908415 /* ObjcBasic */ = {
 			isa = PBXGroup;
 			children = (
-				CB8A439F1A3FFA5400908415 /* ObjcBasic.h */,
-				CB8A43A11A3FFA5400908415 /* ObjcBasic.m */,
 			);
 			path = ObjcBasic;
 			sourceTree = "<group>";
@@ -211,6 +218,9 @@
 		CB8A43AB1A3FFA5400908415 /* ObjcBasicTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB239F1C1B1D799F00BA8F64 /* ZLIKiwiSpecTest.m */,
+				CB239F1D1B1D799F00BA8F64 /* ZLISampleXCTest.m */,
+				CB239F191B1D74FB00BA8F64 /* protocol */,
 				CBBBC0B01B0C6C2C0074BD68 /* designPattern */,
 				CBBBC0AD1B0960540074BD68 /* memoryManagement */,
 				CBBBC0AA1B0852770074BD68 /* category */,
@@ -382,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8A43A21A3FFA5400908415 /* ObjcBasic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,10 +400,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB4F1FF01AF1944C006715A5 /* ZLIVariableScopeTest.m in Sources */,
+				CB239F1B1B1D750F00BA8F64 /* ZLIProtocolTest.m in Sources */,
 				CB6CD4971B006E86000FC3BF /* ZLIBooleanTest.m in Sources */,
 				CB6CD49E1B0197BC000FC3BF /* ZLISetTest.m in Sources */,
 				CB4F1FEE1AF191C7006715A5 /* ZLIOperatorTest.m in Sources */,
 				CB46D23D1B01DB71006EB859 /* ZLILoggingTest.m in Sources */,
+				CB239F1E1B1D799F00BA8F64 /* ZLIKiwiSpecTest.m in Sources */,
 				CB6CD49C1B007605000FC3BF /* ZLIArrayTest.m in Sources */,
 				CB46D23F1B048014006EB859 /* ZLIClassTest.m in Sources */,
 				CBBBC0AC1B0852900074BD68 /* ZLICategoryTest.m in Sources */,
@@ -402,6 +413,7 @@
 				CB6CD4951AFF2B4B000FC3BF /* ZLIStringTest.m in Sources */,
 				CBBBC0AF1B0962640074BD68 /* ZLIVariableReferenceTest.m in Sources */,
 				CBBBC0B41B0C6C870074BD68 /* ZLIDelegateTest.m in Sources */,
+				CB239F1F1B1D799F00BA8F64 /* ZLISampleXCTest.m in Sources */,
 				CBBBC0B21B0C6C680074BD68 /* ZLISingletonClassTest.m in Sources */,
 				CB5AF6CF1AF9F4A000303765 /* ZLINumberTest.m in Sources */,
 				CB46D23A1B01C4FA006EB859 /* ZLIObjectTest.m in Sources */,
