@@ -73,6 +73,37 @@ describe(@"string", ^{
 
             [[mutableStr should] equal:@"hello world"];
         });
+
+        it(@"unicode based character length", ^{
+            NSString *str = @"你好";
+            [[theValue([str length]) should] equal:theValue(2)];
+        });
+
+        it(@"scan string using NSScanner", ^{
+            NSString *str = @"4 by 5";
+            NSScanner *scanner = [NSScanner scannerWithString:str];
+            int row = 0;
+            int col = 0;
+            [scanner scanInt:&row];
+            [scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:nil];
+            [scanner scanInt:&col];
+            [[theValue(row) should] equal:theValue(4)];
+            [[theValue(col) should] equal:theValue(5)];
+        });
+
+        it(@"parse int using regex", ^{
+            NSString *str = @"4 by 5";
+            int rowcol[2];
+            int *intPtr = rowcol;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d" options:0 error:nil];
+
+            for(NSTextCheckingResult *match in [regex matchesInString:str options:0 range:NSMakeRange(0, [str length])]) {
+                *intPtr = [[str substringWithRange:[match range]] intValue];
+                intPtr++;
+            }
+            [[theValue(rowcol[0]) should] equal:theValue(4)];
+            [[theValue(rowcol[1]) should] equal:theValue(5)];
+        });
     });
 });
 

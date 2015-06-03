@@ -14,6 +14,20 @@
 
 @end
 
+@interface ZLIInheritanceSuperClass (ZLICategoryTest)
+
+- (NSString *)superCategoryMethod;
+
+@end
+
+@implementation ZLIInheritanceSuperClass (ZLICategoryTest)
+
+- (NSString *)superCategoryMethod {
+    return @"superCategoryMethod";
+}
+
+@end
+
 @interface ZLIInheritanceSubClass : ZLIInheritanceSuperClass
 
 @end
@@ -35,6 +49,14 @@ describe(@"class inheritance", ^{
             NSString *result = [subClass overrideMethod];
 
             [[result should] equal:@"sub class"];
+        });
+    });
+
+    context(@"category", ^{
+        it(@"calling category method for grandparent", ^{
+            ZLIInheritanceSubClass *subClass = [ZLIInheritanceSubClass new];
+            NSString *result = [subClass superCategoryMethod];
+            [[result should] equal:@"superCategoryMethod"];
         });
     });
 });

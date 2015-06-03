@@ -41,6 +41,28 @@ describe(@"dictionary", ^{
 
             [[theValue(dict[@"key1"] == [NSNull null]) should] beYes];
         });
+
+        it(@"loop through", ^{
+            NSDictionary *map = @{
+                                  @"first" : @"firstValue",
+                                  @"second" : @"secondValue"
+                                  };
+
+            for (NSString *eachKey in map) {
+                [[map[eachKey] should] equal:[map valueForKey:eachKey]];
+            }
+        });
+
+        it(@"block iterator", ^{
+            NSDictionary *dict = @{@"first" : @"firstValue",
+                                   @"second" : @"secondValue"};
+            [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                [[key should] equal:@"first"];
+                [[obj should] equal:@"firstValue"];
+                
+                *stop=YES;
+            }];
+        });
     });
 
     context(@"mutable", ^{

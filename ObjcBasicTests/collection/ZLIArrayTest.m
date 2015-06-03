@@ -22,6 +22,19 @@ describe(@"array", ^{
 
             [[theValue([array count]) should] equal:theValue(3)];
         });
+
+        it(@"element referenced in an immutable could still be modified", ^{
+            NSMutableString *mutableString = [NSMutableString stringWithString:@"Mutable string"];
+            NSArray *immutableArray = @[mutableString];
+
+            if ([immutableArray count] > 0) {
+                id item = immutableArray[0];
+                if ([item isKindOfClass:[NSMutableString class]]) {
+                    [item appendString:@" more stuff"];
+                }
+            }
+            [[immutableArray should] equal:@[@"Mutable string more stuff"]];
+        });
     });
 
     context(@"basic operation", ^{
@@ -46,6 +59,83 @@ describe(@"array", ^{
 
             [[theValue(contains) should] beYes];
             [[theValue(notContain) should] beNo];
+        });
+
+        it(@"can contain null, which is a shared singleton", ^{
+            NSArray *arrayWithNull = @[@"firstItem", [NSNull null]];
+
+            BOOL containsNull = NO;
+            for (id item in arrayWithNull) {
+                if (item == [NSNull null]) {
+                    containsNull = YES;
+                }
+            }
+            [[theValue(containsNull) should] beYes];
+        });
+
+        it(@"different ways to loop through", ^{
+            NSArray *array = @[@"a", @"b", @"c"];
+
+            for (int i = 0; i < [array count]; i++) {
+                [[array[i] should] equal:array[i]];
+            }
+
+            NSUInteger i = 0;
+            for (id item in array) {
+                [[item should] equal:array[i]];
+                i++;
+            }
+
+            i = [array count];
+            for (id item in [array reverseObjectEnumerator]) {
+                i--;
+                [[item should] equal:array[i]];
+            }
+
+            id tmpItem;
+            NSEnumerator *enumerator = [array objectEnumerator];
+            while (tmpItem = [enumerator nextObject]) {
+                [[tmpItem should] equal:array[i]];
+                i++;
+            }
+        });
+
+        it(@"block iterator", ^{
+            NSMutableArray *intArray = [NSMutableArray array];
+            for (int count = 0; count < 10; count++) {
+                [intArray addObject:[NSNumber numberWithInt:count]];
+            }
+            [intArray enumerateObjectsWithOptions:kNilOptions usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                intArray[idx] = @([((NSNumber *)obj) intValue] + 1);
+                if (idx == 5) {
+                    *stop = YES;
+                }
+            }];
+            [[expectFutureValue(intArray) shouldEventually] equal:@[@1, @2, @3, @4, @5, @6, @6, @7, @8, @9]];
+        });
+
+        it(@"writing and loading from file", ^{
+            NSFileManager *fm = [NSFileManager new];
+            NSURL *dir = [fm URLsForDirectory:NSCachesDirectory inDomains:NSLocalDomainMask][0];
+            NSURL *fileURL = [dir URLByAppendingPathComponent:@"arrayfile"];
+            NSLog(@"The fileURL is %@", fileURL);
+
+            NSArray *arrayToWrite = @[@"a", @"b", @"c"];
+            BOOL success = [arrayToWrite writeToURL:fileURL atomically:YES];
+            [[theValue(success) should] beYes];
+
+            NSArray *loadedArray = [NSArray arrayWithContentsOfURL:fileURL];
+            [[loadedArray should] equal:arrayToWrite];
+
+            [[[NSFileManager alloc] init] removeItemAtURL:fileURL error:nil];
+        });
+
+        it(@"comparison", ^{
+            NSArray *array1 = @[@"a", @"b", @"c"];
+            NSArray *array2 = @[@"a", @"b", @"c"];
+
+            [[theValue([array1 isEqual:array2]) should] beYes];
+            [[theValue([array1 isEqualToArray:array2]) should] beYes];
         });
     });
 
