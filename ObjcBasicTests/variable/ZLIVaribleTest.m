@@ -3,7 +3,7 @@
 SPEC_BEGIN(ZLIVariableTest)
 
 describe(@"variable", ^{
-    context(@"bascis", ^{
+    context(@"basics", ^{
         it(@"creation", ^{
             int intVar = 1;
 
