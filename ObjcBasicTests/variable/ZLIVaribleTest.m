@@ -30,7 +30,7 @@ describe(@"variable", ^{
             [[theValue(intVar2) should] equal:theValue(intVar1)];
         });
 
-        it(@"non-initialized pointer variable is set to nil by compile", ^{
+        it(@"non-initialized pointer variable is set to nil by compiler", ^{
             NSNumber *num;
 
             [[num should] beNil];
