@@ -32,6 +32,18 @@ describe(@"Basic operator syntax", ^{
             [[theValue(1 + 1) should] equal:theValue(2)];
         });
     });
+
+    context(@"conditional statement", ^{
+        it(@"what is considered true/false", ^{
+            BOOL result = false;
+
+            if (![NSNull null]) {
+                result = true;
+            }
+
+            [[theValue(result) should] beTrue];
+        });
+    });
 });
 
 SPEC_END
